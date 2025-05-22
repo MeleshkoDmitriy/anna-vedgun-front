@@ -9,6 +9,9 @@
   ],
   "rules": {
     "at-rule-no-unknown": null,
-    "scss/at-rule-no-unknown": null
+    "scss/at-rule-no-unknown": null,
+    "import-notation": "string",
+    "function-url-quotes": null,
+    "string-quotes": "single"
   }
 } 
