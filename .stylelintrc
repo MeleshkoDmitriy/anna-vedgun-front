@@ -2,10 +2,14 @@
   "extends": [
     "stylelint-config-standard",
     "stylelint-config-prettier",
-    "stylelint-config-recommended-less"
+    "stylelint-config-standard-scss"
+  ],
+  "plugins": [
+    "stylelint-scss"
   ],
   "rules": {
-    "at-rule-no-unknown": [
+    "at-rule-no-unknown": null,
+    "scss/at-rule-no-unknown": [
       true,
       {
         "ignoreAtRules": [
@@ -20,8 +24,6 @@
           "extend"
         ]
       }
-    ],
-    "less/color-no-invalid-hex": true,
-    "less/no-duplicate-variables": true
+    ]
   }
 } 
