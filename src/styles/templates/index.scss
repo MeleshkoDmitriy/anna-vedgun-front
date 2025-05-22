@@ -1,0 +1,12 @@
+@import '@/styles/variables/gaps';
+@import '@/styles/variables/colors';
+@import '@/styles/variables/shadows';
+@import '@/styles/variables/borders';
+
+%box {
+  width: 100%;
+  padding: get-gap(primary);
+  border-radius: get-radius(primary);
+  background-color: white;
+  box-shadow: get-box-shadow(primary);
+}

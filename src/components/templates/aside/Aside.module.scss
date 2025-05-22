@@ -1,0 +1,8 @@
+@import '@/styles/index';
+
+.aside {
+  width: 200px;
+  height: 200px;
+
+  @extend %box;
+}

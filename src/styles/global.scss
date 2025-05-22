@@ -1,15 +1,5 @@
 @import '@/styles/index';
 
-html,
-body {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  width: 100%;
-  height: 100%;
-  background-color: get-color(background);
-}
-
 p,
 h1,
 h2,
@@ -20,10 +10,28 @@ h6 {
   margin: 0;
 }
 
+html,
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  width: 100%;
+  height: 100%;
+  background-color: get-color(background);
+}
+
+.body {
+  width: 100%;
+  display: flex;
+  align-items: stretch;
+  gap: get-gap(primary) * 2;
+}
+
 .container {
   width: 100%;
   max-width: 750px;
   margin: 0 auto;
+  padding: 50px 0;
 
   @media (max-width: get-breakpoint(desktop)) {
     max-width: 700px;
@@ -40,4 +48,12 @@ h6 {
   @media (max-width: get-breakpoint(mobile)) {
     max-width: 300px;
   }
+}
+
+.scroll-view {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: get-gap(primary) * 2;
 }
