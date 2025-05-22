@@ -1,0 +1,10 @@
+$font-sizes: (
+  'small': 12px,
+  'medium': 14px,
+  'large': 16px,
+  'xlarge': 22px,
+);
+
+@function get-font-size($key) {
+  @return map-get($font-sizes, $key);
+}

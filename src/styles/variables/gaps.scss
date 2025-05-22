@@ -1,0 +1,8 @@
+$gaps: (
+  'primary': 8px,
+  'secondary': 4px,
+);
+
+@function get-gap($key) {
+  @return map-get($gaps, $key);
+}

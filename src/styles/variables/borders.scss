@@ -1,0 +1,7 @@
+$border-radiuses: (
+  'primary': 8px,
+);
+
+@function get-radius($key) {
+  @return map-get($border-radiuses, $key);
+}
