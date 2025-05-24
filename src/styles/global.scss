@@ -20,6 +20,12 @@ body {
   background-color: get-color(background);
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: pointer;
+}
+
 .body {
   width: 100%;
   display: flex;

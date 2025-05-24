@@ -1,0 +1,29 @@
+@import '@/styles/variables/transitions';
+
+@mixin button($variant) {
+  overflow: hidden;
+  width: 100%;
+  cursor: pointer;
+  font-size: get-font-size(medium);
+  border-width: 1px;
+  border-style: solid;
+  font-weight: 700;
+  outline: none;
+  transition: get-transition(fast);
+
+  &:hover {
+    opacity: 0.85;
+  }
+
+  @if $variant == 'solid' {
+    background-color: get-color(dark);
+    color: get-color(whity);
+    border-color: transparent;
+    border-radius: get-radius(primary);
+  } @else if $variant == 'outline' {
+    background-color: get-color(whity);
+    color: get-color(black);
+    border-color: get-color(ash);
+    border-radius: get-radius(primary);
+  }
+}

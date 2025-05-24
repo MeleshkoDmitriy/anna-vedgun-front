@@ -17,6 +17,14 @@ export const IconLink: FC<IconLinkProps> = ({ icon, text, link }) => {
   );
 
   return (
-    <div className={styles.wrapper}>{link ? <Link href={link}>{content}</Link> : content}</div>
+    <>
+      {link ? (
+        <Link href={link} target="_blank" className={styles.wrapper}>
+          {content}
+        </Link>
+      ) : (
+        <div className={styles.wrapper}>{content}</div>
+      )}
+    </>
   );
 };

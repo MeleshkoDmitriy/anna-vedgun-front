@@ -1,3 +1,4 @@
+import { Button } from '@/components/atoms/buttons/Button';
 import styles from './Contacts.module.scss';
 import { IconLink } from '@/components/atoms/icon-link/IconLink';
 import { B17Icon, InstagramIcon, TelegramIcon } from '@/components/atoms/icons';
@@ -18,6 +19,7 @@ export const Contacts = () => {
         text="Instagram"
       />
       <IconLink icon={<B17Icon style={iconInlineStyles} />} link={contacts.B17} text="B17" />
+      <Button variant="solid" size="sm" link={contacts.Telegram} text="Записаться" />
     </section>
   );
 };

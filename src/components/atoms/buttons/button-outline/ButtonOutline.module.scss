@@ -1,0 +1,11 @@
+@import '@/styles/index';
+
+.link {
+  display: block;
+  width: 100%;
+}
+
+.button {
+  @include button(outline);
+  @extend %button-padding;
+}

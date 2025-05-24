@@ -9,3 +9,15 @@
   background-color: white;
   box-shadow: get-box-shadow(primary);
 }
+
+%button-padding {
+  &.sm {
+    padding-top: get-gap(primary);
+    padding-bottom: get-gap(primary);
+  }
+
+  &.md {
+    padding-top: get-gap(primary) * 1.5;
+    padding-bottom: get-gap(primary) * 1.5;
+  }
+}
