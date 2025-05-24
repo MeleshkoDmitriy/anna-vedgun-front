@@ -8,6 +8,8 @@
   border-radius: get-radius(primary);
   background-color: white;
   box-shadow: get-box-shadow(primary);
+  overflow: hidden;
+  backdrop-filter: blur(5px);
 }
 
 %button-padding {

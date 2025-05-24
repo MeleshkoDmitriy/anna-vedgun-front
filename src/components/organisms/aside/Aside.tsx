@@ -5,8 +5,10 @@ import { Contacts } from '@/components/molecules/contacts/Contacts';
 export const Aside = () => {
   return (
     <aside className={styles.aside}>
-      <Profile />
-      <Contacts />
+      <div className={styles.content}>
+        <Profile />
+        <Contacts />
+      </div>
     </aside>
   );
 };

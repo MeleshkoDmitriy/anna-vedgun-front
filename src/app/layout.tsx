@@ -3,6 +3,7 @@ import '@/styles/global.scss';
 import { Aside } from '@/components/organisms/aside/Aside';
 import { Navbar } from '@/components/organisms/navbar/Navbar';
 import { Comfortaa } from 'next/font/google';
+import { TopBlur } from '@/components/atoms/top-blur/TopBlur';
 
 const font = Comfortaa({
   weight: ['400', '700'],
@@ -23,11 +24,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${font.className} container body`}>
-        <Aside />
-        <div className="scroll-view">
-          <Navbar />
-          <main>{children}</main>
+      <body className={`${font.className} body`}>
+        <TopBlur />
+        <div className="container layout">
+          <Aside />
+          <div className="scroll-view">
+            <Navbar />
+            <main>{children}</main>
+          </div>
         </div>
       </body>
     </html>

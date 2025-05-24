@@ -3,7 +3,12 @@
 .aside {
   max-width: 200px;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  gap: get-gap(primary) * 2;
+
+  .content {
+    position: sticky;
+    top: get-gap(top);
+    display: flex;
+    flex-direction: column;
+    gap: get-gap(primary) * 2;
+  }
 }

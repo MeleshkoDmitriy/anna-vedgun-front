@@ -1,0 +1,12 @@
+@import '@/styles/index';
+
+.section {
+  width: 100%;
+  height: get-gap(top);
+  backdrop-filter: blur(2px);
+  background: linear-gradient(to top, transparent, get-color(background));
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 100;
+}
