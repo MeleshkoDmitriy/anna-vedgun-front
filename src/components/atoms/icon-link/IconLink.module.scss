@@ -1,0 +1,31 @@
+@import '@/styles/index';
+
+.wrapper {
+  display: flex;
+  gap: get-gap(secondary);
+  color: get-color(text-light);
+  transition: get-transition(fast);
+
+  a {
+    display: flex;
+    gap: get-gap(secondary);
+    color: inherit;
+    text-decoration: none;
+    cursor: pointer;
+  }
+
+  .text {
+    color: get-color(text-light);
+    transition: get-transition(fast);
+    text-decoration: none;
+    font-size: get-font-size(medium);
+  }
+
+  &:hover {
+    color: get-color(text-dark);
+
+    .text {
+      color: get-color(text-dark);
+    }
+  }
+}

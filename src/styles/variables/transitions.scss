@@ -1,0 +1,7 @@
+$transitions: (
+  'fast': 0.3s,
+);
+
+@function get-transition($key) {
+  @return map-get($transitions, $key);
+}

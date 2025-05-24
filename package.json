@@ -9,10 +9,10 @@
     "lint": "next lint",
     "prepare": "husky",
     "test": "jest --passWithNoTests",
-    "test:watch": "jest --watch",
     "test:coverage": "jest --coverage"
   },
   "dependencies": {
+    "@heroicons/react": "^2.2.0",
     "dotenv": "^16.5.0",
     "next": "15.3.2",
     "react": "^19.0.0",

@@ -1,0 +1,7 @@
+$sizes: (
+  'icon': '16px',
+);
+
+@function get-size($key) {
+  @return map-get($sizes, $key);
+}

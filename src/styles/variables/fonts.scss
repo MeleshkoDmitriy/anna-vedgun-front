@@ -2,7 +2,7 @@ $font-sizes: (
   'small': 12px,
   'medium': 14px,
   'large': 16px,
-  'xlarge': 22px,
+  'xlarge': 28px,
 );
 
 @function get-font-size($key) {

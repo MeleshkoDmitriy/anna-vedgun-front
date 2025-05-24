@@ -1,0 +1,13 @@
+@import '@/styles/index';
+
+.wrapper {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  border-radius: get-radius(primary);
+  overflow: hidden;
+  position: relative;
+
+  .avatar {
+    object-fit: contain;
+  }
+}

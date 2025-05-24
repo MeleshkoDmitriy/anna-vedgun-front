@@ -1,0 +1,9 @@
+@import '@/styles/index';
+
+.contacts {
+  @extend %box;
+
+  display: flex;
+  flex-direction: column;
+  gap: get-gap(primary);
+}

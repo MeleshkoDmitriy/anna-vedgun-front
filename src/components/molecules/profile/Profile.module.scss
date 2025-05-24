@@ -1,0 +1,14 @@
+@import '@/styles/index';
+
+.profile {
+  @extend %box;
+
+  display: flex;
+  flex-direction: column;
+  gap: get-gap(primary);
+
+  .title {
+    color: get-color(text-dark);
+    font-size: get-font-size(xlarge);
+  }
+}
