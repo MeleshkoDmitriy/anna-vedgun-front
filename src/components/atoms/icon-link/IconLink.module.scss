@@ -11,6 +11,8 @@
     transition: get-transition(fast);
     text-decoration: none;
     font-size: get-font-size(large);
+    position: relative;
+    top: 2px;
   }
 
   &:hover {

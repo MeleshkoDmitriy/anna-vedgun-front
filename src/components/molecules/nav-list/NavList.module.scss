@@ -6,4 +6,10 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+
+  .item {
+    transition: get-transition(fast);
+
+    @extend %hover-opacity;
+  }
 }

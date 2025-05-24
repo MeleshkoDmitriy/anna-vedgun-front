@@ -1,4 +1,5 @@
 @import '@/styles/variables/transitions';
+@import '@/styles/templates';
 
 @mixin button($variant) {
   overflow: hidden;
@@ -11,9 +12,7 @@
   outline: none;
   transition: get-transition(fast);
 
-  &:hover {
-    opacity: 0.85;
-  }
+  @extend %hover-opacity;
 
   @if $variant == 'solid' {
     background-color: get-color(dark);

@@ -21,3 +21,11 @@
     padding-bottom: get-gap(primary) * 1.5;
   }
 }
+
+%hover-opacity {
+  transition: get-transition(fast);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}
