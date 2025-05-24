@@ -1,0 +1,24 @@
+@import '@/styles/index';
+
+.wrapper {
+  padding: get-gap(secondary) get-gap(primary);
+  border-width: 1px;
+  border-style: solid;
+  border-color: get-color(ash);
+  border-radius: get-radius(primary);
+  background-color: get-color(background);
+
+  .text {
+    font-size: get-font-size(large);
+    color: get-color(text-dark);
+  }
+
+  &.active {
+    border-color: get-color(dark);
+    background-color: get-color(dark);
+
+    .text {
+      color: get-color(whity);
+    }
+  }
+}

@@ -5,5 +5,5 @@
   width: 100%;
   display: flex;
   flex-direction: column;
-  gap: get-gap(primary);
+  gap: get-gap(primary) * 2;
 }
