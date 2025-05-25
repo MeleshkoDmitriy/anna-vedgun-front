@@ -1,0 +1,7 @@
+@import '@/styles/index';
+
+.list {
+  display: flex;
+  flex-direction: column;
+  gap: get-gap(primary);
+}

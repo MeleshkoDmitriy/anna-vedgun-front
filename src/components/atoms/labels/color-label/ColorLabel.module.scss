@@ -1,0 +1,24 @@
+@import '@/styles/index';
+
+.label {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: get-gap(primary);
+  border-style: solid;
+  border-width: 0 0 0 2px;
+
+  &.red {
+    border-left-color: get-color(danger);
+  }
+
+  &.green {
+    border-left-color: get-color(success);
+  }
+
+  .text {
+    font-size: get-font-size(small);
+    color: get-color(text-light);
+    padding-left: get-gap(primary);
+  }
+}

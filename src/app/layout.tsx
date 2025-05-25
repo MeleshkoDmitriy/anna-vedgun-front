@@ -4,6 +4,7 @@ import { Aside } from '@/components/organisms/aside/Aside';
 import { Navbar } from '@/components/organisms/navbar/Navbar';
 import { Comfortaa } from 'next/font/google';
 import { TopBlur } from '@/components/atoms/top-blur/TopBlur';
+import { Footer } from '@/components/atoms/footer/Footer';
 
 const font = Comfortaa({
   weight: ['400', '700'],
@@ -33,6 +34,7 @@ export default function RootLayout({
             <main>{children}</main>
           </div>
         </div>
+        <Footer />
       </body>
     </html>
   );

@@ -5,6 +5,8 @@ $colors: (
   'ash': #dcdcdc,
   'whity': #fff,
   'background': #f6f6f6,
+  'success': rgb(75 196 14 / 99%),
+  'danger': rgb(255 0 0 / 99%),
 );
 
 @function get-color($key) {

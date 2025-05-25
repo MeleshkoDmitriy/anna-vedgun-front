@@ -1,0 +1,82 @@
+@import '@/styles/index';
+
+.accordion {
+  @extend %box;
+
+  width: 100%;
+  transition: get-transition(fast);
+  padding: 0;
+
+  .header {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+
+    .left {
+      display: flex;
+      align-items: center;
+      gap: get-gap(primary);
+
+      .icon {
+        width: get-gap(top);
+        aspect-ratio: 1 / 1;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: get-color(dark);
+        border-radius: 0;
+        color: get-color(whity);
+        transition: get-transition(fast);
+      }
+    }
+
+    .right {
+      width: get-gap(top);
+      aspect-ratio: 1 / 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      .icon {
+        transition: get-transition(fast);
+      }
+    }
+  }
+
+  .container {
+    width: 100%;
+    max-height: 0;
+    opacity: 0;
+    transition: all get-transition(fast);
+    overflow: hidden;
+  }
+
+  .content {
+    padding: get-gap(primary);
+  }
+}
+
+.collapsed {
+  transition: get-transition(fast);
+
+  .header {
+    .left {
+      .icon {
+        border-radius: 0 0 get-radius(primary) 0;
+      }
+    }
+
+    .right {
+      .icon {
+        transform: rotate(180deg);
+      }
+    }
+  }
+
+  .container {
+    max-height: 2000px;
+    opacity: 1;
+  }
+}
