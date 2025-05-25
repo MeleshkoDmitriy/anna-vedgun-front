@@ -10,6 +10,8 @@ export const Profile = () => {
     <section className={styles.profile}>
       <AvatarWrapper avatar={avatar} />
       <h1 className={styles.title}>Анна Ведьгун</h1>
+      <p className={styles.subtitle}>Психолог</p>
+      <p className={styles.paragraph}>Онлайн и оффлайн консультации</p>
       <IconLink icon={<LocationIcon style={iconInlineStyles} />} text="Гомель, Беларусь" />
     </section>
   );

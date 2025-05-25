@@ -1,0 +1,7 @@
+@import '@/styles/index';
+
+.list {
+  display: flex;
+  gap: get-gap(primary) * 2;
+  flex-wrap: wrap;
+}

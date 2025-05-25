@@ -1,0 +1,17 @@
+@import '@/styles/index';
+
+.section {
+  display: flex;
+  flex-direction: column;
+  gap: get-gap(primary) * 2;
+
+  .content {
+    display: flex;
+    flex-direction: column;
+    gap: get-gap(primary) * 2;
+    font-size: get-font-size(medium);
+    color: get-color(text-light);
+
+    @extend %paragraph;
+  }
+}

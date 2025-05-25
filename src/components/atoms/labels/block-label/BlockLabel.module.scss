@@ -1,0 +1,9 @@
+@import '@/styles/index';
+
+.block {
+  @extend %box;
+
+  .label {
+    font-size: get-font-size(large);
+  }
+}

@@ -31,3 +31,14 @@
     opacity: 0.8;
   }
 }
+
+%page {
+  display: flex;
+  flex-direction: column;
+  gap: get-gap(primary) * 3;
+}
+
+%paragraph {
+  font-size: get-font-size(medium);
+  line-height: 1.5rem;
+}

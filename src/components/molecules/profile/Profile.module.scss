@@ -10,5 +10,16 @@
   .title {
     color: get-color(text-dark);
     font-size: get-font-size(xlarge);
+    text-align: center;
+  }
+
+  .subtitle {
+    color: get-color(text-dark);
+    font-size: get-font-size(large);
+  }
+
+  .paragraph {
+    color: get-color(text-light);
+    font-size: get-font-size(medium);
   }
 }
