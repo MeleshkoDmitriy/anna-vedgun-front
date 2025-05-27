@@ -1,0 +1,14 @@
+@import '@/styles/index';
+
+.textarea {
+  display: block;
+  background-color: get-color(ash);
+  color: get-color(text-dark);
+  border-radius: get-radius(primary);
+  border: none;
+  outline: none;
+  padding: get-gap(primary);
+  resize: none;
+  scrollbar-width: none;
+  min-height: get-gap(top) * 2;
+}

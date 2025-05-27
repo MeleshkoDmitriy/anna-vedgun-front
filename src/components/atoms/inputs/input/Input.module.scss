@@ -1,0 +1,11 @@
+@import '@/styles/index';
+
+.input {
+  display: block;
+  background-color: get-color(ash);
+  color: get-color(text-dark);
+  border-radius: get-radius(primary);
+  border: none;
+  outline: none;
+  padding: get-gap(primary);
+}
