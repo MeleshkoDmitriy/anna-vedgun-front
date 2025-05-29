@@ -4,7 +4,7 @@ import styles from './Textarea.module.scss';
 interface TextareaProps extends ComponentPropsWithRef<'textarea'> {
   id: string;
   name: string;
-  onChange: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLTextAreaElement>) => void;
 }
 
 export const Textarea = ({ id, name, onChange }: TextareaProps) => {

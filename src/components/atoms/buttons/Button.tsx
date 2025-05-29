@@ -1,8 +1,9 @@
+import { ButtonForm } from './button-form/ButtonForm';
 import { ButtonOutline } from './button-outline/ButtonOutline';
 import { ButtonSolid } from './button-solid/ButtonSolid';
 import { ComponentPropsWithoutRef, FC } from 'react';
 
-export type TButtonVariant = 'solid' | 'outline';
+export type TButtonVariant = 'solid' | 'outline' | 'form';
 export type TButtonSize = 'sm' | 'md';
 
 export interface ButtonProps extends ComponentPropsWithoutRef<'button'> {
@@ -19,6 +20,8 @@ export const Button: FC<ButtonProps> = ({ variant, size, text, onClick, link }) 
       return <ButtonSolid size={size} onClick={onClick} link={link} text={text} />;
     case 'outline':
       return <ButtonOutline size={size} onClick={onClick} link={link} text={text} />;
+    case 'form':
+      return <ButtonForm size={size} onClick={onClick} link={link} text={text} />;
     default:
       <ButtonOutline size={size} onClick={onClick} link={link} text={text} />;
   }

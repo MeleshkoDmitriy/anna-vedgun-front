@@ -5,7 +5,7 @@ interface InputProps extends ComponentPropsWithRef<'input'> {
   id: string;
   type: string;
   name: string;
-  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 export const Input = ({ type, onChange, id, name }: InputProps) => {

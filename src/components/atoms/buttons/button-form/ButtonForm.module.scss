@@ -1,0 +1,11 @@
+@import '@/styles/index';
+
+.button {
+  @include button(solid);
+  @extend %button-padding;
+
+  height: get-gap(primary) * 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

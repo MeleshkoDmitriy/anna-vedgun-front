@@ -1,0 +1,22 @@
+@import '@/styles/index';
+
+.spinner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  animation-name: rotation-animation;
+  animation-duration: get-transition(medium);
+  animation-iteration-count: infinite;
+
+  &.white {
+    border-color: get-color(whity);
+  }
+
+  &.black {
+    border-color: get-color(dark);
+  }
+
+  &.gray {
+    border-color: get-color(text-light);
+  }
+}
