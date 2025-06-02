@@ -8,6 +8,6 @@
 
   @extend %box;
 
-  border-radius: 4px get-radius(primary) get-radius(primary) get-radius(primary);
+  border-radius: 4px 4px get-radius(primary) get-radius(primary);
   margin: 0 -1px;
 }

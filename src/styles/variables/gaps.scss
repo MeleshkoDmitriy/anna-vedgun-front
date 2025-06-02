@@ -2,6 +2,7 @@ $gaps: (
   'primary': 8px,
   'secondary': 4px,
   'top': 50px,
+  'input': 20px,
 );
 
 @function get-gap($key) {

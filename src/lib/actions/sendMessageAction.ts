@@ -2,8 +2,12 @@
 
 import { api_paths } from '@/navigation/api';
 import { getDate } from '../utils/getDate';
+import {
+  FormState,
+  TFeedbackFormErrors,
+} from './../../components/molecules/forms/feedback-form/Feedback.types';
 
-export const sendMessageAction = async (formData: FormData) => {
+export const sendMessageAction = async (state: FormState | undefined, formData: FormData) => {
   const name = formData.get('name') as string;
   const message = formData.get('message') as string;
   const date = getDate();
@@ -11,13 +15,21 @@ export const sendMessageAction = async (formData: FormData) => {
   const BOT_URL = process.env.NEXT_TELEGRAM_BOT_URL;
   const API_URL = process.env.NEXT_MOKKY_API_URL;
 
+  const errors: TFeedbackFormErrors = {};
+
+  if (!message.trim()) {
+    errors.message = 'Поле с сообщением является обязательным!';
+  }
+
+  if (Object.keys(errors).length > 0) {
+    return {
+      errors,
+    };
+  }
+
   if (!BOT_URL || !API_URL) {
     throw new Error('API URLs are not configured');
   }
-
-  let telegramSuccess = false;
-  let apiSuccess = false;
-  const errors: string[] = [];
 
   try {
     const botResponse = await fetch(BOT_URL, {
@@ -26,7 +38,7 @@ export const sendMessageAction = async (formData: FormData) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name,
+        name: name || 'Аноним',
         message,
         date,
       }),
@@ -35,10 +47,8 @@ export const sendMessageAction = async (formData: FormData) => {
     if (!botResponse.ok) {
       throw new Error('Failed to send message to Telegram');
     }
-    telegramSuccess = true;
   } catch (error) {
     console.error('Telegram error:', error);
-    errors.push('Failed to send to Telegram');
   }
 
   try {
@@ -48,7 +58,7 @@ export const sendMessageAction = async (formData: FormData) => {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        name,
+        name: name || 'Аноним',
         message,
         date,
       }),
@@ -57,22 +67,7 @@ export const sendMessageAction = async (formData: FormData) => {
     if (!apiResponse.ok) {
       throw new Error('Failed to send message to Mokky');
     }
-    apiSuccess = true;
   } catch (error) {
     console.error('API error:', error);
-    errors.push('Failed to send to API');
   }
-
-  if (telegramSuccess || apiSuccess) {
-    return {
-      success: true,
-      partial: !(telegramSuccess && apiSuccess),
-      errors: errors,
-    };
-  }
-
-  return {
-    success: false,
-    errors: errors,
-  };
 };

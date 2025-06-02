@@ -1,0 +1,29 @@
+@import '@/styles/index';
+
+.error {
+  overflow: hidden;
+  position: relative;
+  max-height: 100%;
+  height: 0;
+  transition: get-transition(fast);
+
+  .text {
+    color: get-color(danger);
+    font-size: get-font-size(small);
+    visibility: hidden;
+    opacity: 0;
+    transition: get-transition(fast);
+    position: absolute;
+    top: -20px;
+
+    &.visible {
+      visibility: visible;
+      opacity: 1;
+      top: 0;
+    }
+  }
+
+  &:has(.visible) {
+    height: 16px;
+  }
+}

@@ -6,8 +6,18 @@ interface InputProps extends ComponentPropsWithRef<'input'> {
   type: string;
   name: string;
   onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  placeholder?: string;
 }
 
-export const Input = ({ type, onChange, id, name }: InputProps) => {
-  return <input className={styles.input} type={type} onChange={onChange} id={id} name={name} />;
+export const Input = ({ type, onChange, id, name, placeholder }: InputProps) => {
+  return (
+    <input
+      className={styles.input}
+      type={type}
+      onChange={onChange}
+      id={id}
+      name={name}
+      placeholder={placeholder}
+    />
+  );
 };

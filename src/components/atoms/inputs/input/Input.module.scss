@@ -8,5 +8,9 @@
   border: none;
   outline: none;
   padding: get-gap(primary);
-  height: get-gap(top) / 2;
+  height: get-gap(input);
+
+  &::placeholder {
+    color: get-color(whity);
+  }
 }
