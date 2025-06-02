@@ -28,6 +28,8 @@ export const FeedbackForm = () => {
     }
   };
 
+  // react hook form
+
   return (
     <Form className={styles.form} ref={formRef} action={handleActionForm}>
       <FormLabel label="Имя">

@@ -1,7 +1,7 @@
 import { MinusIcon, PlusIcon } from '@/components/atoms/icons';
 import { Accordion } from '@/components/molecules/accordion/Accordion';
+import { ServiceList } from '@/components/molecules/lists';
 import { PageSection } from '@/components/molecules/page-section/PageSection';
-import { ServiceList } from '@/components/molecules/service-list/ServiceList';
 import { psychologyServices } from '@/data/psychology';
 import { iconBigInlineStyles } from '@/styles/inline-styles';
 

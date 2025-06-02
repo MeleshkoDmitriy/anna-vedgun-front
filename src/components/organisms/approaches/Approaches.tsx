@@ -1,4 +1,4 @@
-import { BlockList } from '@/components/molecules/block-list/BlockList';
+import { BlockList } from '@/components/molecules/lists';
 import { PageSection } from '@/components/molecules/page-section/PageSection';
 import { psychologyApproaches } from '@/data/psychology';
 
