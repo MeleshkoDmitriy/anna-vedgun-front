@@ -7,6 +7,7 @@
   animation-name: rotation-animation;
   animation-duration: get-transition(medium);
   animation-iteration-count: infinite;
+  animation-timing-function: ease-out;
 
   &.white {
     border-color: get-color(whity);
