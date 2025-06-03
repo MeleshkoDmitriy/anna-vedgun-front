@@ -1,5 +1,6 @@
 $border-radiuses: (
   'primary': 8px,
+  'secondary': 4px,
 );
 
 @function get-radius($key) {

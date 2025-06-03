@@ -1,0 +1,71 @@
+@import '@/styles/index';
+
+.card {
+  @extend %box;
+
+  display: flex;
+  flex-direction: column;
+
+  &.sm {
+    min-width: 200px;
+    width: 200px;
+    min-height: 300px;
+    height: 300px;
+  }
+
+  &.md {
+    min-width: 200px;
+    width: 100%;
+    min-height: 300px;
+    height: 300px;
+  }
+
+  .header {
+    width: 200px;
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    border-radius: get-radius(secondary);
+    background-color: get-color(background);
+
+    .image {
+      object-fit: contain;
+      width: 100%;
+      cursor: pointer;
+      transition: get-transition(fast);
+
+      &:hover {
+        transform: scale(1.2);
+      }
+    }
+  }
+
+  .body {
+    flex: 1 1 100%;
+    display: flex;
+    flex-direction: column;
+    gap: get-gap(primary);
+    padding: get-gap(primary) 0;
+
+    .title {
+      font-size: get-font-size(large);
+      color: get-color(text-dark);
+    }
+
+    .description {
+      font-size: get-font-size(medium);
+      color: get-color(text-light);
+    }
+  }
+
+  .footer {
+    display: flex;
+    justify-content: flex-end;
+
+    .date {
+      font-size: get-font-size(small);
+      color: get-color(text-light);
+      padding-top: get-gap(primary);
+    }
+  }
+}
